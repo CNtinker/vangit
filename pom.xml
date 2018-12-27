@@ -120,6 +120,14 @@
                     <include>**/*.xml</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
         </resources>
         <!--如果项目有依赖其它的jar，就需要maven-dependency-plugin插件把其它依赖也一起打包，否则，就不需要 -->
         <pluginManagement>
