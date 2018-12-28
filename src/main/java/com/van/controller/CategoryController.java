@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpSession;
@@ -21,6 +22,7 @@ import java.util.Map;
 /**
  * Created by dzw on 2018/12/21.
  */
+@SessionAttributes(value = "pds")
 @Controller
 public class CategoryController {
     @Autowired
@@ -62,7 +64,6 @@ public class CategoryController {
         List<Product> pds= cs.findAllById(map);
         mod.addAttribute("pg",pg);
         mod.addAttribute("pds",pds);
-
         return "search";
     }
 }
