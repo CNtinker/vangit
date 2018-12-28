@@ -23,7 +23,7 @@ public class IndexController {
             List<Category> list = is.findAllCategory();
             session.setAttribute("list", list);
         }
-        return "Product";
+        return "index2";
     }
 
 

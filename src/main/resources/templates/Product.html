@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=uft-8"/>
 
-    <title>凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1 - 男装 卫衣 套头卫衣 - VANCL 凡客诚品</title>
+    <title th:text="${session.product.getP_name()}+'- VANCL 凡客诚品'">男装 卫衣 套头卫衣 - VANCL 凡客诚品</title>
     <meta name="keywords"
-          content="凡客卫衣 暖绒连帽 熊本熊 S2 ，男装 卫衣 套头卫衣，浅花灰1，http://video.vanclimg.com/product-video/1091766.mp4，VANCL凡客诚品"/>
+          content="http://video.vanclimg.com/product-video/1091766.mp4，VANCL凡客诚品"/>
     <meta name="description" content="空，VANCL凡客诚品网上购物、送货上门、货到付款，无条件退换货。"/>
     <link rel="shortcut icon" href="//i.vanclimg.com/common/favicon/favicon.ico" type="image/x-icon"/>
     <link href="Product/css/css.css"
@@ -270,8 +270,9 @@
 <div id="ProductTitleHide" class="danpinTitleTab newclear" style="display: none">
 
 
-    <h2 title="凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1">
-        凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1
+    <h2 th:title="${session.product.getP_name()}" >
+        <span th:text="${session.product.getP_name()}">
+            凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1</span>
         <span style="margin-left: 10px; font-size: 14px; font-weight: bold; color: #a10000;">
         充值购买更优惠</span>
     </h2>
@@ -324,10 +325,9 @@
                 <div class="brandNumArea">
                     <span id="productcode">商品编号：6378651</span></div>
 
-                <h2 title="凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1">
+                <h2 th:title="${session.product.getP_name()}">
 
-
-                    凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1
+                    <span th:text="${session.product.getP_name()}">凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1</span>
                     <span style="margin-left: 10px; font-size: 14px; font-weight: bold; color: #a10000;">
             充值购买更优惠</span>
                 </h2>
@@ -481,7 +481,7 @@
      <span class="tehuiMoney" style="line-height: 26px;">
 
         <span>
-            特惠价：</span><span style="font-family: '微软雅黑';">￥<strong>156.00</strong></span>
+            特惠价：</span><span style="font-family: '微软雅黑';">￥<strong th:text="${session.product.getP_price()}">156.00</strong></span>
 
 
 
@@ -3550,9 +3550,9 @@ var tagArray=new Array();
                             <div class="Askquestion" style="display: none;">
                                 <h3>
                                     <p>
-                                        <span></span>提问：凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1</p>
+                                        <span></span>提问：<span th:text="${session.product.getP_name()}">凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1</span></p>
                                 </h3>
-                                <input type="hidden" id="title" value="凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1"/>
+                                <input type="hidden" id="title" value="凡客卫衣 暖绒连帽 熊本熊 S6 浅花灰1" th:value="${session.product.getP_name()}"/>
                                 <dl class="questionStyle">
                                     <dt>提问类型：</dt>
                                     <dd>
