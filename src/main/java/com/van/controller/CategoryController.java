@@ -62,7 +62,10 @@ public class CategoryController {
         List<Product> pds= cs.findAllById(map);
         mod.addAttribute("pg",pg);
         mod.addAttribute("pds",pds);
-
+        if(categoryLevel1!=null){
+            return "fenlei2";
+        }
         return "search";
+
     }
 }
